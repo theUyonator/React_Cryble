@@ -14,6 +14,7 @@ const Homepage = () => {
     const globalStats = data?.data?.stats;
 
     // console.log(data);
+    console.log(process.env);
    
 
     if (isFetching) return <Loader />;
