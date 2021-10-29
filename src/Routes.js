@@ -1,8 +1,9 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails } from './components'
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails, LoginForm, SignupForm, UserProfile } from './components';
+import PrivateRoute from './PrivateRoute';
 
- function Routes() {
+ function Routes({ login, signup, logout }) {
    
     return (
         // <>
@@ -11,26 +12,30 @@ import { Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails } from './co
                     <Homepage />
                 </Route>
 
-                {/* <Route exact path="/login">
+                <Route exact path="/login">
                     <LoginForm login={login} />
                 </Route>
 
                 <Route exact path="/signup">
                     <SignupForm signup={signup}/>
-                </Route> */}
+                </Route>
 
-                <Route exact path="/exchanges">
+                <PrivateRoute exact path="/exchanges">
                     <Exchanges />
-                </Route>
-                <Route exact path="/cryptocurrencies">
+                </PrivateRoute>
+                <PrivateRoute exact path="/cryptocurrencies">
                     <Cryptocurrencies />
-                </Route>
-                <Route exact path="/crypto/:coinId">
+                </PrivateRoute>
+                <PrivateRoute exact path="/crypto/:coinId">
                     <CryptoDetails />
-                </Route>
-                <Route exact path="/news">
+                </PrivateRoute>
+                <PrivateRoute exact path="/news">
                     <News />
-                </Route>
+                </PrivateRoute>
+                <PrivateRoute exact path="/profile">
+                    <UserProfile logout={logout}/>
+                </PrivateRoute>
+                <Redirect to="/" />
 
             </Switch>
 

@@ -1,20 +1,51 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import millify from 'millify';
-import { Typography, Row, Col, Statistic } from 'antd';
+import { Typography, Row, Col, Statistic, Space, Button } from 'antd';
 import { Link } from 'react-router-dom';
+import UserContext from '../auth/UserContext';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import { Cryptocurrencies, News } from '../components';
 import Loader from './Loader';
 
-const { Title } = Typography;
+const { Title, Paragraph } = Typography;
 
 const Homepage = () => {
+    const { currentUser } = useContext(UserContext);
     const { data, isFetching } = useGetCryptosQuery(10);
     const globalStats = data?.data?.stats;
 
     // console.log(data);
     // console.log(process.env);
+
+    if(!currentUser) return (
+        <Row style={{marginTop: 290, marginBottom: 290}}>
+            <Col span={20} offset={2}>
+                <Title level={5} style={{ color: 'black', textAlign: 'center'}}>
+                    Welcome to Cryble the Crypto Bible, a complete library for all crypto cryptocurrencies.<br />
+                    Sign up to learn more on about all cryptocurrencies today! 
+                <div style={{marginTop: 20}}>
+                    <Space>
+                        <Button type="primary">
+                            <Link className="btn btn-primary font-weight-bold mr-3"
+                                to="/login">
+                                Log in
+                            </Link>
+                        </Button>
+                        <Button type="primary">
+                            <Link className="btn btn-primary font-weight-bold"
+                                to="/signup">
+                                Sign up
+                            </Link>
+                        </Button>
+                    </Space>
+
+                </div>
+        
+                </Title>
+            </Col>
+        </Row>
+        )
    
 
     if (isFetching) return <Loader />;
