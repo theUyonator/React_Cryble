@@ -1,3 +1,54 @@
+# React_Cryble
+[Cryble](https://danieluyo-cryble.surge.sh) pronounced cri-ble is a fullstack React app that provides educational content on the top cryptocurrencies in the world. Think of it as an encyclopedia for cryptocurrencies, showing the general stats for the cryptocurrency markets, individual stats and background information for the top 100 cryptocurrencies in the world, exchanges, and recent news articles on cryptocurrency. This app makes use of the [Rapid Api Hub](https://rapidapi.com/hub), specifically the [Coinranking Api](https://rapidapi.com/Coinranking/api/coinranking1/) for information on the cryptocurrency markets and individual currencies or tokens and the [Bing News Search Api](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/) which filters and retrieves recent news articles on the cryptocurrency markets and individual tokens. This web app is geared towards users that are seeking knowledge on cryptocurrencies in order to make educated investment decisions.
+
+
+
+# Documentation
+1. Details:  
+a. Visit the web app Cryble today to start learning all about cryptocurrencies, [click the link to use](https://danieluyo-cryble.surge.sh).  
+b. Cryble prompts the user to register or login to begin viewing the content.  
+c. Key features include:    
+  i. Register.   
+  ii. Login.   
+ iii. General Market stats  
+ iv.Top 10 cryptocurrencies in the world   
+ v. Top 100 cryptocurrencies in the world  
+ vi. Details and financial stats about each cryptocurrency displayed  
+ vii. Most recent news articles on cryptocurrencies  
+ viii. Filtered search of news articles on individual tokens   
+ ix. Information on available exchanges    
+ x. User account update
+ xi. User account delete  
+ 
+d. Standard User Flow:  
+ - Starts on the anonymous homepage with the nav bar showing sign up and login links.  
+ - If user does not have an active account, user can go ahead and create one with the sign up link.  
+ - Once an account is created, Cryble takes the user to the site homepage which displays general crypto stats, the top 10 cryptocurrencies in the world and 6 most recent news articles on cryptocurrency. The active nav bar shows links for homepage, cryptocurrencies, exchanges, news, user profile and logout.
+ - The user can click on the cards displayed for the top 10 cryptocurrencies to view their individual stats and details.  
+ - The user can also opt to click the see more link which will then display the top 100 cryptocurrencies in the world along with a search form to allow the user to filter a specific cryptocurrency. The user can also click on individual cards to view stats and details on individual tokens. 
+ - The user can then navigate to the exchanges tab in the nav bar to view crypto exchanges, and the news tab to view crypto news. 
+ - To update account information and delete account, the user can navigate to the user profile tab.
+ - Finally, to leave the web app, the user clicks the nav link "logout".
+ 
+ 
+e. APIS used:  
+ - [Rapid Api Hub](https://rapidapi.com/hub)
+ - [Coinranking Api](https://rapidapi.com/Coinranking/api/coinranking1/)  
+ - [Bing News Search Api](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/)
+
+f. Technology stack, frameworks, libraries and packages  used to create [Cryble](https://danieluyo-cryble.surge.sh) include:  
+ - React 
+ - Node.js 
+ - Redux 
+ - Ant Design 
+ - Chart.js 
+ - Millify 
+ - Momment 
+ - PostgreSQL  
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

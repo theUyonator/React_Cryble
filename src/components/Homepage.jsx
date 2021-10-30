@@ -23,7 +23,7 @@ const Homepage = () => {
             <Col span={20} offset={2}>
                 <Title level={5} style={{ color: 'black', textAlign: 'center'}}>
                     Welcome to Cryble the Crypto Bible, a complete library for all crypto cryptocurrencies.<br />
-                    Sign up to learn more on about all cryptocurrencies today! 
+                    Sign up to learn more about all cryptocurrencies today! 
                 <div style={{marginTop: 20}}>
                     <Space>
                         <Button type="primary">
