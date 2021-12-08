@@ -56,7 +56,7 @@ function LoginForm({ login }) {
         <Row style={{marginBottom: 80}}>
             <Col span={10} offset={5}>
                 <Card style={{ width: 600, height: 600}}>
-                    <Title level={5} span={5}> Log In to Crybel</Title>
+                    <Title level={5} span={5}> Log In to Cryble</Title>
                     <Form
                         labelCol={{
                                     span: 8,
